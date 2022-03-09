@@ -1481,7 +1481,6 @@ section>.right {
 .pricing .plan h3 {
     font-size: 25px;
     font-weight: 900;
-    position: relative;
 }
 
 .pricing .plan.advance h3::before {
@@ -1492,7 +1491,7 @@ section>.right {
     background-color: var(--clr-main);
     transform: rotate(90deg);
     z-index: 100;
-    top: var(--top-padding);
+    top: 45px;
     color: white;
     font-size: 14px;
     padding: 0 var(--top-padding) 0 10px;
@@ -1503,10 +1502,10 @@ section>.right {
     content: "";
     position: absolute;
     border: 14px solid;
-    border-color: transparent transparent white transparent;
+    border-color: transparent transparent #fafaf7 transparent;
     right: 55px;
     z-index: 200;
-    top: 69px;
+    top: 89px
 }
 
 .pricing .plan img {
