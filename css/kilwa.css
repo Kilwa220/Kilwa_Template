@@ -1513,28 +1513,25 @@ section>.right {
     font-weight: 900;
 }
 
-.pricing .plan.advance h3::before {
-    content: "Most Popular";
+.pricing .advance .popular {
     position: absolute;
-    width: fit-content;
-    background-color: var(--clr-main);
     writing-mode: vertical-lr;
-    z-index: 100;
-    top: 0;
+    padding: 10px 5px 25px;
+    background-color: var(--clr-main);
     color: white;
-    font-size: 14px;
-    padding: 12px 4px 20px;
-    right: 40px;
+    right: 25px;
+    width: 40px;
+    top: 0;
+    font-weight: bold;
 }
 
-.pricing .plan.advance h3::after {
+.pricing .advance .popular::after {
     content: "";
     position: absolute;
-    border: 16px solid;
+    border: 20px solid;
     border-color: transparent transparent white transparent;
-    right: 41px;
-    z-index: 200;
-    top: 81px;
+    right: 0;
+    bottom: 0;
 }
 
 .pricing .plan img {
