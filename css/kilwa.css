@@ -119,6 +119,21 @@ a {
     animation: right-move .5s linear forwards
 }
 
+.spikes {
+    position: relative;
+    z-index: 5000
+}
+
+.spikes::after {
+    content: '';
+    right: 0;
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+
 
 /* START MAIN-HEADING KEYFRAMES */
 
@@ -1569,7 +1584,6 @@ section>.right {
 .pricing .plan a {
     display: block;
     color: var(--clr-main);
-    border: 3px solidd;
     width: fit-content;
     margin: 30px auto 15px;
     border: 2px solid var(--clr-main);
@@ -1581,7 +1595,8 @@ section>.right {
 
 .pricing .plan a:hover {
     background-color: var(--clr-main);
-    color: white
+    color: white;
+    border-color: white
 }
 
 
@@ -1703,6 +1718,7 @@ section>.right {
     background-color: white;
     padding: 15px;
     box-shadow: 0px 0px 7px 3px #dfdfdf;
+    margin-top: 10px
 }
 
 @media (max-width: 767px) {
