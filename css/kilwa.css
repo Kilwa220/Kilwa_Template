@@ -1290,7 +1290,12 @@ a {
     width: 75px;
     padding: 10px 0 5px;
     border-radius: 7px;
-    background-color: white
+    background-color: white;
+    transition: var(--main-deration)
+}
+
+.events .counter:hover {
+    border-color: var(--clr-main);
 }
 
 .events .counters .counter:not(:last-child) {
@@ -1306,6 +1311,11 @@ a {
     font-size: 30px;
     font-weight: bold;
     border-bottom: 1px solid #ddd;
+    transition: var(--main-deration)
+}
+
+.events .counter:hover span:first-child {
+    border-bottom-color: var(--clr-main);
 }
 
 .events .counters .counter span:last-child {
@@ -1332,11 +1342,11 @@ a {
     border-radius: 57px;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 @media (max-width: 767px) {
     .events form {
+        flex-direction: column;
         border-radius: 0;
         border-width: 15px
     }
@@ -1354,7 +1364,7 @@ a {
 .events form input[type="email"] {
     flex: 1;
     border-radius: 40px;
-    padding: 0 30px;
+    padding: 20px 30px;
     font-size: 18px;
     caret-color: var(--clr-main);
     max-width: 100%;
@@ -1366,8 +1376,13 @@ a {
     }
 }
 
+.events form input[type="email"]::placeholder {
+    opacity: 1;
+    transition: opacity var(--main-deration)
+}
+
 .events form input[type="email"]:focus::placeholder {
-    color: transparent;
+    opacity: 0
 }
 
 .events form input[type="submit"] {
@@ -1484,28 +1499,27 @@ section>.right {
 }
 
 .pricing .plan.advance h3::before {
-    --top-padding: 25px;
     content: "Most Popular";
     position: absolute;
     width: fit-content;
     background-color: var(--clr-main);
-    transform: rotate(90deg);
+    writing-mode: vertical-lr;
     z-index: 100;
-    top: 45px;
+    top: 0;
     color: white;
     font-size: 14px;
-    padding: 0 var(--top-padding) 0 10px;
-    right: 10px;
+    padding: 12px 4px 20px;
+    right: 40px;
 }
 
 .pricing .plan.advance h3::after {
     content: "";
     position: absolute;
-    border: 14px solid;
+    border: 16px solid;
     border-color: transparent transparent #fafaf7 transparent;
-    right: 55px;
+    right: 41px;
     z-index: 200;
-    top: 89px
+    top: 81px;
 }
 
 .pricing .plan img {
