@@ -1516,7 +1516,7 @@ section>.right {
     content: "";
     position: absolute;
     border: 16px solid;
-    border-color: transparent transparent #fafaf7 transparent;
+    border-color: transparent transparent white transparent;
     right: 41px;
     z-index: 200;
     top: 81px;
